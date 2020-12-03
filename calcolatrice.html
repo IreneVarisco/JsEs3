@@ -28,11 +28,8 @@
     $("<button id=\"btn1\">+</button>").on("click", function(){
         var num1 = $("#num1").val();
         var num2 = $("#num2").val();
-        console.log("num1 " + num1);
-        console.log("num2 " + num2);
-        console.log($("#num1"));
-        total = parseInt(num1) + parseInt(num2);
-        console.log(total);
+        var isco = parseInt(num1) + parseInt(num2);
+        $("body").append(isco);
 
     })
         );
@@ -40,11 +37,8 @@
     $("<button id=\"btn1\">-</button>").on("click", function(){
         var num1 = $("#num1").val();
         var num2 = $("#num2").val();
-        console.log("num1 " + num1);
-        console.log("num2 " + num2);
-        console.log($("#num1"));
-        total = parseInt(num1) - parseInt(num2);
-        console.log(total);
+        var isco = parseInt(num1) - parseInt(num2);
+        $("body").append(isco);
 
     })
         );
@@ -52,11 +46,8 @@
     $("<button id=\"btn1\">/</button>").on("click", function(){
         var num1 = $("#num1").val();
         var num2 = $("#num2").val();
-        console.log("num1 " + num1);
-        console.log("num2 " + num2);
-        console.log($("#num1"));
-        total = parseInt(num1) / parseInt(num2);
-        console.log(total);
+        var isco = parseInt(num1) / parseInt(num2);
+        $("body").append(isco);
 
     })
         );
@@ -64,17 +55,12 @@
     $("<button id=\"btn1\">*</button>").on("click", function(){
         var num1 = $("#num1").val();
         var num2 = $("#num2").val();
-        console.log("num1 " + num1);
-        console.log("num2 " + num2);
-        console.log($("#num1"));
-        total = parseInt(num1) * parseInt(num2);
-        console.log(total);
-
+        var isco = parseInt(num1) * parseInt(num2);
+        $("body").append(isco);
     })
         );
         
-        var isco = $("body").append($("<h3>wow</h3>"));
-
+        
     </script>
   </body>
 </html>
