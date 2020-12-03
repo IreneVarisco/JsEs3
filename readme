@@ -1,0 +1,5 @@
+creazione diu una semplice calcolatrice che svolga le funzione di somma, sotrazione, divisione e moltiplicazione
+si sviluppi in 3 step:
+1-pagina html con 2 caselle di testo e 4 pulsanti per le operzaioni. 
+2-in jquery assegnare funzioni di calcolo a tutti i pulsanti e stampare il risultato
+3-mantenere in memoria il risultato tramite callback
