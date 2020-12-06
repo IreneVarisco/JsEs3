@@ -1,66 +1,29 @@
 <html>
   <head>
-    <title>es 2</title>
+    <title>es 3</title>
   </head>
-  <body id="body1">
+  <body>
     <h1 id="sksk">Es3</h1>
-    <p>
-      Pagina calcolatrice.
-    </p>
-    
+    <p>Pagina calcolatrice</p>
+
     <div id="div1" style="background-color: rgb(41, 255, 87)">
       <h2>calcolatrice</h2>
     </div>
 
     <br /><br />
 
-    <label for = "num1">numero:</label>
-    <input type="number" id= "num1" name="num1"><br><br>
-    <label for = "num2">numero:</label>
-    <input type="number" id= "num2" name="num2"><br><br>
+    <label for="num1">numero1:</label>
+    <input type="number" id="num1" name="num1" /><br /><br />
+    <label for="num2">numer2:</label>
+    <input type="number" id="num2" name="num2" /><br /><br />
+    <button id="btn1">+</button>
+    <button id="btn2">-</button>
+    <button id="btn3">/</button>
+    <button id="btn4">*</button>
+    <br />
+    <span id="span1"></span>
 
-    <script src="JsEs3.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
-
-    
-        $("body").append(
-    $("<button id=\"btn1\">+</button>").on("click", function(){
-        var num1 = $("#num1").val();
-        var num2 = $("#num2").val();
-        var isco = parseInt(num1) + parseInt(num2);
-        $("body").append(isco);
-
-    })
-        );
-        $("body").append(
-    $("<button id=\"btn1\">-</button>").on("click", function(){
-        var num1 = $("#num1").val();
-        var num2 = $("#num2").val();
-        var isco = parseInt(num1) - parseInt(num2);
-        $("body").append(isco);
-
-    })
-        );
-        $("body").append(
-    $("<button id=\"btn1\">/</button>").on("click", function(){
-        var num1 = $("#num1").val();
-        var num2 = $("#num2").val();
-        var isco = parseInt(num1) / parseInt(num2);
-        $("body").append(isco);
-
-    })
-        );
-        $("body").append(
-    $("<button id=\"btn1\">*</button>").on("click", function(){
-        var num1 = $("#num1").val();
-        var num2 = $("#num2").val();
-        var isco = parseInt(num1) * parseInt(num2);
-        $("body").append(isco);
-    })
-        );
-        
-        
-    </script>
+    <script src="JsEs3.js"> </script>
   </body>
 </html>
