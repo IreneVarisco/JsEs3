@@ -1,4 +1,4 @@
-$("#btn1").click(function () {
+  $("#btn1").click(function () {
     calcola("+");
   });
   $("#btn2").click(function () {
