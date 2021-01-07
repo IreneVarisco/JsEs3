@@ -1,6 +1,8 @@
 <html>
   <head>
     <title>es 3</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="JsEs3.js"> </script>
   </head>
   <body>
     <h1 id="sksk">Es3</h1>
@@ -37,8 +39,14 @@
         padding:8px
       }
     </style>
+    <script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="JsEs3.js"> </script>
+      if (typeof last_operation === "undefined" || last_operation === null){ 
+        var last_operation = localStorage.getItem("operazione");
+        $("#tabella").append(last_operation);
+      }
+      
+      </script>
+    
   </body>
 </html>
