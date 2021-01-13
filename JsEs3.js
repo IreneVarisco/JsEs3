@@ -20,7 +20,14 @@
     
     var string = ("<tr><td>"+ n1 +"</td>"+"<td>"+ segno +"</td>"+"<td>"+ n2 +"</td>"+"<td>"+ isco +"</td> <td>"+ '<button class="btnDelete" style="background-color: crimson" onclick="cancella()">cancella</button>' +"</td><tr>");
     var line = $(string);
-    localStorage.setItem("operazione", string);
+    
+    var operations_array = localStorage.getItem("array);
+    //{}--> obj   []--->array
+    // operation_array[1]= 6
+    // operation_array.push(6)
+    operation_array.push(string);
+    
+    localStorage.setItem("array", operation_array);
     $("#tabella").append(line);
 
     var last_operation = localStorage.getItem("operazione");
