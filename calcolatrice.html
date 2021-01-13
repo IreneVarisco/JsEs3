@@ -41,8 +41,8 @@
     </style>
     <script>
 
-      if (typeof last_operation === "undefined" || last_operation === null){ 
-        var last_operation = localStorage.getItem("operazione");
+      if (typeof operation_array === "undefined" || operation_array === null){ 
+        var operation_array = localStorage.getItem("array");
         $("#tabella").append(last_operation);
       }
       
