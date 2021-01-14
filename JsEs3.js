@@ -20,17 +20,17 @@
     
     var string = ("<tr><td>"+ n1 +"</td>"+"<td>"+ segno +"</td>"+"<td>"+ n2 +"</td>"+"<td>"+ isco +"</td> <td>"+ '<button class="btnDelete" style="background-color: crimson" onclick="cancella()">cancella</button>' +"</td><tr>");
     var line = $(string);
-    
-    var operations_array = localStorage.getItem("array);
+    $("#tabella").append(line);
     //{}--> obj   []--->array
     // operation_array[1]= 6
     // operation_array.push(6)
-    operation_array.push(string);
     
-    localStorage.setItem("array", operation_array);
-    $("#tabella").append(line);
+    var arrayLine = JSON.parse(localStorage.getItem("array") || "[]") ;
+    arrayLine.push(string);
+    localStorage.setItem("array", JSON.stringify(arrayLine));
+    
 
-    var last_operation = localStorage.getItem("operazione");
+    //json è la rappresentazione grafica di un oggetto in stringa
   }
   function calcola(segno) {
     var n1 = parseInt($("#num1").val());
@@ -40,6 +40,7 @@
     switch (segno) {
       case "+":
         isco = n1 + n2;
+        console.log(isco);
         tabella(n1, segno, n2, isco);
         break;
       case "-":

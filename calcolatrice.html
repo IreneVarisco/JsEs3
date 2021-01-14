@@ -2,7 +2,7 @@
   <head>
     <title>es 3</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="JsEs3.js"> </script>
+    
   </head>
   <body>
     <h1 id="sksk">Es3</h1>
@@ -39,12 +39,23 @@
         padding:8px
       }
     </style>
+    <script src="JsEs3.js"> </script>
     <script>
 
-      if (typeof operation_array === "undefined" || operation_array === null){ 
-        var operation_array = localStorage.getItem("array");
-        $("#tabella").append(last_operation);
+      if ($("td").length === 0) {
+        var arrayLine = JSON.parse(localStorage.getItem("array") || "[]");
+        if (arrayLine !== []) {
+          console.log("stampa elementi");
+          arrayLine.forEach(function (item) {
+            console.log(item);
+          });
+          console.log("popolo tabella");
+          arrayLine.forEach(function (item) {
+            $("#tabella").append(item);
+          });
+        }
       }
+      //$("#tabella").append(last_operation);
       
       </script>
     
