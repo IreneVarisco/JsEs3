@@ -11,11 +11,14 @@
   $("#btn4").click(function () {
     calcola("*");
   });
+  
   function cancella() {
     $("#tabella").on('click','.btnDelete',function(){
       $(this).closest('tr').remove();
     });
   }
+
+
   function tabella(n1, segno, n2, isco) {
     
     var string = ("<tr><td>"+ n1 +"</td>"+"<td>"+ segno +"</td>"+"<td>"+ n2 +"</td>"+"<td>"+ isco +"</td> <td>"+ '<button class="btnDelete" style="background-color: crimson" onclick="cancella()">cancella</button>' +"</td><tr>");
@@ -24,13 +27,14 @@
     //{}--> obj   []--->array
     // operation_array[1]= 6
     // operation_array.push(6)
-    
+    //json è la rappresentazione grafica di un oggetto in stringa
+
     var arrayLine = JSON.parse(localStorage.getItem("array") || "[]") ;
     arrayLine.push(string);
     localStorage.setItem("array", JSON.stringify(arrayLine));
-    
+    console.log("prova2");  //entrambi i console log vengono eseguiti, è sbagliata la posizione di queste 3 righe?
 
-    //json è la rappresentazione grafica di un oggetto in stringa
+    
   }
   function calcola(segno) {
     var n1 = parseInt($("#num1").val());
@@ -40,7 +44,6 @@
     switch (segno) {
       case "+":
         isco = n1 + n2;
-        console.log(isco);
         tabella(n1, segno, n2, isco);
         break;
       case "-":
